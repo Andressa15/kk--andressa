@@ -23,6 +23,7 @@ public class PizzariaController {
 		return modelAndView;
 	}
 
+
 	@GetMapping("/cadastra")
 	public ModelAndView Cadastra() {
 		ModelAndView modelAndModel = new ModelAndView("postagens.html");

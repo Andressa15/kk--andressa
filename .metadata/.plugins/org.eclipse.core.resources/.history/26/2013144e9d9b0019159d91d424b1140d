@@ -1,5 +1,6 @@
 package com.br.pizzaria.controller;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.br.pizzaria.model.PizzariaModel;
 import com.br.pizzaria.service.PizzariaService;
+
 
 @Controller
 public class PizzariaController {
@@ -22,6 +24,7 @@ public class PizzariaController {
 		modelAndView.addObject("pizzas", pizzariaServices.mostrarLista());
 		return modelAndView;
 	}
+
 
 	@GetMapping("/cadastra")
 	public ModelAndView Cadastra() {
