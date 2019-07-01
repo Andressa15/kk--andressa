@@ -1,0 +1,32 @@
+package com.br.Pizzaria.Services;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+//import org.springframework.web.bind.annotation.PostMapping;
+
+import com.br.Pizzaria.models.PizzariaModel;
+
+
+@Service
+public class PizzariaService {
+
+
+	List<PizzariaModel> listaDePizza = new ArrayList<PizzariaModel>();
+
+	public void adicionar() {
+		listaDePizza.add(new PizzariaModel("Calabresa", "fina","borda corda", "18,00"));
+		listaDePizza.add(new PizzariaModel("Queijo","massa nova-iorquina","borda gravata borboleta", "35,00"));           		
+		listaDePizza.add(new PizzariaModel("Atum","massa siciliana"," Borda simples", "20,00"));
+	}
+	public 	List<PizzariaModel>  mostrarLista(){
+		return listaDePizza;
+	}
+
+	public List<PizzariaModel> Cadastrar(PizzariaModel pizzaria) {
+		listaDePizza.add(pizzaria);
+	return listaDePizza;
+	}
+
+}

@@ -1,0 +1,25 @@
+package com.br.facezup.services;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
+import com.br.facezup.models.PostagemModel;
+
+@Service
+public class postagemService {
+
+	@SuppressWarnings("serial")
+	private Map<Integer, PostagemModel> postagens = new HashMap<Integer, PostagemModel>(){{
+		put(1, new PostagemModel("http://espiritismonapratica.com.br/uploads/images/2016/09/o-universo-vive-em-voce-1474751698.jpg", "Universo", "Conhece-te a ti mesmo e conhecerás o universo e os deuses." ));	
+	}};
+
+	public  Collection<PostagemModel> retornarPostagem(){
+		return this.postagens.values();
+	}
+	public void salvarPostagem(PostagemModel postagemModel) {
+		postagens.put(postagens.size()+1, postagemModel);
+	}
+}

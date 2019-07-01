@@ -1,0 +1,23 @@
+package com.br.Pizzaria.Services;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.br.Pizzaria.models.pizzariaModel;
+
+@Service
+public class PizzariaService {
+
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	List<pizzariaModel> listaDePizza = new ArrayList() {
+
+		public void adicionar() {
+			listaDePizza.add(new pizzariaModel("Calabresa"));
+			listaDePizza.add(new pizzariaModel("Queijo"));           		
+			listaDePizza.add(new pizzariaModel("Frango"));
+			listaDePizza.add(new pizzariaModel("Atum"));
+		}
+	}
+}

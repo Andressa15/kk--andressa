@@ -1,0 +1,15 @@
+package com.br.facezup.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.br.facezup.services.postagemService;
+
+@Controller
+public class postagemController {
+
+	@Autowired
+	postagemService postagemServices;
+	
+	
+}

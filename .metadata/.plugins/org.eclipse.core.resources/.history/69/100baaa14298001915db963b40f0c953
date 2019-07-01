@@ -1,0 +1,22 @@
+package com.br.facezup.services;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
+import com.br.facezup.models.PostagemModel;
+
+@Service
+public class postagemService {
+
+	private Map<Integer, PostagemModel> postagens = new HashMap<Integer, PostagemModel>(){{
+	put(1, new PostagemModel("https://www.google.com/search?tbm=isch&sa=1&ei=17UTXY-NJ8y55OUPheew8AU&q=universo&oq=universo&gs_l=img.3...10089.12316..12692...0.0..0.16.16.1......0....1..gws-wiz-img.....0.IZRIF4XekYQ#", "Universo", "Conhece-te a ti mesmo e conhecerás o universo e os deuses." ));	
+	}};
+	
+	public  Map<Integer, PostagemModel> retornarPostagem(){
+		return this.postagens;
+	}
+
+}

@@ -1,0 +1,36 @@
+package com.br.Pizzaria.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.br.Pizzaria.Services.PizzariaService;
+import com.br.Pizzaria.models.PizzariaModel;
+
+@Controller
+public class PizzariaController {
+
+	@Autowired
+	PizzariaService pizzariaServices;
+
+	@GetMapping
+	public ModelAndView exibirPizza() {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("Pizza",pizzariaServices.mostrarLista());
+		return modelAndView;
+	}	
+	
+	@GetMapping("/cadastra")
+	public ModelAndView fichaCadastra() {
+		ModelAndView modelAndModel = new ModelAndView("ficha.html");
+		return modelAndModel;
+	}
+//	@PostMapping
+//	public String salvarPostagem(PizzariaModel pizzariaModel ) {
+//	pizzariaServices.SalvaCadastrar(pizzariaModel);
+//	return "redirect:/";
+
+}
+
